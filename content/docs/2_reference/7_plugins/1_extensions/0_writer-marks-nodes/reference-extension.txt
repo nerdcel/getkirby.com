@@ -48,6 +48,14 @@ window.panel.plugin("your/plugin", {
 });
 ```
 
+### Allowing `<mark>` Tag in Kirby Sane HTML
+
+To allow the `<mark>` tag in the writer field and prevent Kirby from stripping it out, use the following code snippet in your plugins index.php file:
+
+```php
+Kirby\Sane\Html::$allowedTags['mark'] = true;
+```
+
 You can also take a look at the (link: https://github.com/getkirby/kirby/blob/main/panel/src/components/Forms/Writer/Marks text: implementation of the default marks) as well as (link: https://prosemirror.net/docs/ref/#model.MarkSpec text: ProseMirror's mark docs).
 
 ## Custom nodes
